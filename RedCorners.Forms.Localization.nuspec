@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RedCorners.Forms.Localization</id>
+    <version>4.11.0-alpha</version>
+    <title>RedCorners.Forms.Localization</title>
+    <authors>Saeed Afshari and NeatCapital OÜ</authors>
+    <owners>NeatCapital OÜ</owners>
+    <projectUrl>https://github.com/saeedafshari/RedCorners.Forms.Localization</projectUrl>
+    <iconUrl>http://ooze.redcorners.com/redcorners_forms_localization_logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easy and intuitive localization tools for Xamarin.Forms.</description>
+    <releaseNotes>Easy and intuitive localization tools for Xamarin.Forms.</releaseNotes>
+    <copyright>Copyright 2019 NeatCapital OÜ</copyright>
+    <tags>Xamarin.Forms Localization Translation i18n JSON iOS Android Xamarin</tags>
+
+	<dependencies>
+      <group targetFramework="netstandard2.0">
+          <dependency id="Xamarin.Forms" version="4.0.0.425677" />
+      </group>
+    </dependencies>
+	
+    <license type="file">license.txt</license>
+  </metadata>
+
+  <files>
+    <file src="license.txt" target="" />
+
+	<file 
+      src="RedCorners.Forms.Localization\bin\Release\netstandard2.0\RedCorners.Forms.Localization.dll" 
+      target="lib\netstandard2.0\RedCorners.Forms.Localization.dll" />
+  </files>
+
+</package>
