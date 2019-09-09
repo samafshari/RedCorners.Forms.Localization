@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace LocalizationDemo
+namespace LocalizationDemo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContentPage2Template
+    public partial class MainPage
     {
-        public ContentPage2Template()
+        public MainPage()
         {
             InitializeComponent();
         }

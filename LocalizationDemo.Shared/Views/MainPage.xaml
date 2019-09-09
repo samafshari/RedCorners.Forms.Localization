@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rf:ContentPage2
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:rf="clr-namespace:RedCorners.Forms;assembly=RedCorners.Forms"
+    xmlns:rl="clr-namespace:RedCorners.Forms.Localization;assembly=RedCorners.Forms.Localization"
+    xmlns:vm="clr-namespace:LocalizationDemo.ViewModels"
+    mc:Ignorable="d"
+    x:Class="LocalizationDemo.Views.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <rf:TitledContentView Title="RedCorners.Forms.Localization">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ListView Grid.Row="0" ItemsSource="{Binding Translations}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Key}" />
+                                <Label Text="{Binding Value}" FontAttributes="Bold" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Grid.Row="1" Text="{rl:RL ChooseLanguage}" FontAttributes="Bold" />
+            
+            <rf:ItemsStack Grid.Row="2" ItemsSource="{Binding Languages}" Orientation="Horizontal">
+                <rf:ItemsStack.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding Language}" Command="{Binding SwitchCommand}" />
+                    </DataTemplate>
+                </rf:ItemsStack.ItemTemplate>
+            </rf:ItemsStack>
+        </Grid>
+    </rf:TitledContentView>
+</rf:ContentPage2>

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RedCorners.Forms.Localization</id>
-    <version>4.11.0-alpha</version>
+    <version>5.30.1</version>
     <title>RedCorners.Forms.Localization</title>
     <authors>Saeed Afshari and NeatCapital OÜ</authors>
     <owners>NeatCapital OÜ</owners>
@@ -17,6 +17,8 @@
 	<dependencies>
       <group targetFramework="netstandard2.0">
           <dependency id="Xamarin.Forms" version="4.0.0.425677" />
+		      <dependency id="RedCorners.Forms" version="5.30.0" />
+          <dependency id="Newtonsoft.Json" version="12.0.1" />
       </group>
     </dependencies>
 	
