@@ -87,7 +87,7 @@ The `GetLanguageKeys()` method returns a list of all loaded language keys (e.g. 
 
 ### Performing Localizations
 
-The `L` method provides the values of the specified key in the selected language:
+The `L` method provides the value of the specified key in the selected language:
 
 ```cs
 Console.WriteLine(RL.L("Hello"));
