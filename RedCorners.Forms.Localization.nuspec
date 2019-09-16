@@ -2,11 +2,11 @@
 <package >
   <metadata>
     <id>RedCorners.Forms.Localization</id>
-    <version>5.30.1</version>
+    <version>5.30.2</version>
     <title>RedCorners.Forms.Localization</title>
     <authors>Saeed Afshari and NeatCapital OÜ</authors>
     <owners>NeatCapital OÜ</owners>
-    <projectUrl>https://github.com/saeedafshari/RedCorners.Forms.Localization</projectUrl>
+    <projectUrl>http://redcorners.com/localization/</projectUrl>
     <iconUrl>http://ooze.redcorners.com/redcorners_forms_localization_logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Easy and intuitive localization tools for Xamarin.Forms.</description>

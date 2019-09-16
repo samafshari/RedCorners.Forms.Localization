@@ -12,12 +12,14 @@ namespace RedCorners.Forms.Localization
 {
     public static class RL
     {
+        public static string CurrentLanguage { get; private set; }
+
         public static string LDayOfWeek(this DateTime dt)
         {
             return L(dt.DayOfWeek.ToString());
         }
 
-        static readonly Dictionary<string, Dictionary<string, string>> keys
+        static Dictionary<string, Dictionary<string, string>> keys
             = new Dictionary<string, Dictionary<string, string>>();
 
         public static Dictionary<string, Dictionary<string, string>> DynamicKeys =
@@ -69,10 +71,6 @@ namespace RedCorners.Forms.Localization
             return new HashSet<string>(langs.Union(DynamicKeys.Keys));
         }
 
-        static bool _isLoaded = false;
-
-        public static string CurrentLanguage { get; private set; }
-
         public static void SetLanguage(string language)
         {
             CurrentLanguage = language;
@@ -83,27 +81,42 @@ namespace RedCorners.Forms.Localization
 
         public static void Load(Type rootType, string prefix, string extension = ".l.json")
         {
-            if (_isLoaded) return;
-            _isLoaded = true;
             var assembly = rootType.GetTypeInfo().Assembly;
             var resourceNames = assembly.GetManifestResourceNames();
-            foreach (var resource in resourceNames.Where(x => x.ToLowerInvariant().EndsWith(extension)))
+            try
             {
-                var lang = resource.Substring(0, resource.Length - extension.Length);
-                lang = lang.Substring(prefix.Length, lang.Length - prefix.Length);
-                keys[lang] = new Dictionary<string, string>();
+                foreach (var resource in resourceNames.Where(x => x.ToLowerInvariant().EndsWith(extension)))
+                {
+                    var lang = resource.Substring(0, resource.Length - extension.Length);
+                    lang = lang.Substring(prefix.Length, lang.Length - prefix.Length);
+                    keys[lang] = new Dictionary<string, string>();
 
-                var suffix = $"{lang}{extension}";
-                var r = resourceNames.FirstOrDefault(x => x.EndsWith(suffix));
-                if (r == null) continue;
+                    var suffix = $"{lang}{extension}";
+                    var r = resourceNames.FirstOrDefault(x => x.EndsWith(suffix));
+                    if (r == null) continue;
 
-                Stream stream = assembly.GetManifestResourceStream(r);
-                string text = "{}";
-                using (var reader = new StreamReader(stream))
-                    text = reader.ReadToEnd();
+                    Stream stream = assembly.GetManifestResourceStream(r);
+                    string text = "{}";
+                    using (var reader = new StreamReader(stream))
+                        text = reader.ReadToEnd();
 
-                keys[lang] = JsonConvert.DeserializeObject<Dictionary<string, string>>(text);
+                    keys[lang] = JsonConvert.DeserializeObject<Dictionary<string, string>>(text);
+                }
             }
+            catch (Exception ex)
+            {
+                throw new AggregateException($"Error loading localization info from the type. Available resources are: {string.Join(", ", resourceNames)}", ex);
+            }
+        }
+
+        public static void Load(string languageKey, Dictionary<string, string> map)
+        {
+            keys[languageKey] = map;
+        }
+
+        public static void Load(Dictionary<string, Dictionary<string, string>> map)
+        {
+            keys = map;
         }
 
         /// <summary>

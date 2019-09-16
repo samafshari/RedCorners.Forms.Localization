@@ -20,11 +20,7 @@ namespace LocalizationDemo
         public override void InitializeSystems()
         {
             base.InitializeSystems();
-#if __ANDROID__
-            RL.Load(typeof(App), "LocalizationDemo.Droid.", ".trans.json");
-#elif __IOS__
-            RL.Load(typeof(App), "LocalizationDemo.iOS.", ".trans.json");
-#endif
+            RL.Load(typeof(App), "LocalizationDemo.", ".trans.json");
 
             RL.SetLanguageKeys(Enum.GetNames(typeof(Languages)));
             RL.SetLanguage(RL.GetLanguageKeys().FirstOrDefault());
