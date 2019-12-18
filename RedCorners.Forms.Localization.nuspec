@@ -2,12 +2,12 @@
 <package >
   <metadata>
     <id>RedCorners.Forms.Localization</id>
-    <version>5.39.3</version>
+    <version>6.41.4</version>
     <title>RedCorners.Forms.Localization</title>
-    <authors>Saeed Afshari and NeatCapital OÜ</authors>
+    <authors>NeatCapital OÜ</authors>
     <owners>NeatCapital OÜ</owners>
     <projectUrl>http://redcorners.com/localization/</projectUrl>
-    <iconUrl>http://ooze.redcorners.com/redcorners_forms_localization_logo.png</iconUrl>
+    <icon>redcorners_forms_localization_logo.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Easy and intuitive localization tools for Xamarin.Forms.</description>
     <releaseNotes>Easy and intuitive localization tools for Xamarin.Forms.</releaseNotes>
@@ -16,12 +16,11 @@
 
 	<dependencies>
       <group targetFramework="netstandard2.0">
-          <dependency id="Xamarin.Forms" version="4.3.0.991211" />
+          <dependency id="Xamarin.Forms" version="4.4.0.991265" />
           <dependency id="Newtonsoft.Json" version="12.0.3" />
       </group>
     </dependencies>
 	
-		<icon>redcorners_forms_localization_logo.png</icon>
     <license type="file">license.txt</license>
   </metadata>
 
