@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RedCorners.Forms.Localization</id>
-    <version>6.41.4</version>
+    <version>8.46.5</version>
     <title>RedCorners.Forms.Localization</title>
     <authors>NeatCapital OÜ</authors>
     <owners>NeatCapital OÜ</owners>
@@ -11,12 +11,12 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Easy and intuitive localization tools for Xamarin.Forms.</description>
     <releaseNotes>Easy and intuitive localization tools for Xamarin.Forms.</releaseNotes>
-    <copyright>Copyright 2019 NeatCapital OÜ</copyright>
+    <copyright>Copyright 2019-2020 NeatCapital OÜ</copyright>
     <tags>Xamarin.Forms Localization Translation i18n JSON iOS Android Xamarin</tags>
 
 	<dependencies>
       <group targetFramework="netstandard2.0">
-          <dependency id="Xamarin.Forms" version="4.4.0.991265" />
+          <dependency id="Xamarin.Forms" version="4.5.0.396" />
           <dependency id="Newtonsoft.Json" version="12.0.3" />
       </group>
     </dependencies>
