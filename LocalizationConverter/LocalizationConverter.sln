@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationConverter", "LocalizationConverter\LocalizationConverter.csproj", "{A126ED46-1255-442B-A297-8B0932EEC0B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A126ED46-1255-442B-A297-8B0932EEC0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A126ED46-1255-442B-A297-8B0932EEC0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A126ED46-1255-442B-A297-8B0932EEC0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A126ED46-1255-442B-A297-8B0932EEC0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB6D77C6-075C-4CB0-9ECE-5F4189672E0B}
+	EndGlobalSection
+EndGlobal

@@ -26,9 +26,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)De.trans.json" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)En.trans.json" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Lu.trans.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)De.l.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)En.l.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Lu.l.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
