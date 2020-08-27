@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LocalizationConverter"
         mc:Ignorable="d"
-        Title="Localization" Height="450" Width="800">
+        Title="Localization" Height="175.333" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Label Content="Localization Folder:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Extension:" HorizontalAlignment="Left" Margin="59,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Excel:" HorizontalAlignment="Left" Margin="83,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFolder" Height="23" Margin="127,14,10.333,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtExtension" Height="23" Margin="127,45,10.333,0" TextWrapping="Wrap" Text=".l.json" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtExcel" Height="23" Margin="127,76,10.333,0" TextWrapping="Wrap" Text="l.xlsx" VerticalAlignment="Top"/>
+        <Button x:Name="btnExcelToJson" Content="Excel to JSON" Margin="0,0,10.333,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="132" Click="btnExcelToJson_Click"/>
+        <Button x:Name="btnJsonToExcel" Content="JSON to Excel" HorizontalAlignment="Left" Margin="514,0,0,10" VerticalAlignment="Bottom" Width="132" Click="btnJsonToExcel_Click"/>
     </Grid>
 </Window>
